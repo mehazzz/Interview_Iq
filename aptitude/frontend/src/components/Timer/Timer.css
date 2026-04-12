@@ -1,0 +1,53 @@
+/* src/components/Timer/Timer.css */
+.timer-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+.timer-bar.warning { border-color: rgba(245,158,11,0.4); }
+.timer-bar.danger  { border-color: rgba(239,68,68,0.5); background: rgba(239,68,68,0.05); }
+
+.timer-left-section, .timer-right-section { flex-shrink: 0; }
+.timer-label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.2rem;
+}
+.timer-display {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: var(--text);
+  transition: color 0.3s;
+}
+.timer-display.warning { color: var(--warning); }
+.timer-display.danger  { animation: timerPulse 1s infinite; color: var(--danger); }
+
+.timer-progress-wrap { flex: 1; }
+.timer-progress-track {
+  height: 4px;
+  background: var(--surface3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+.timer-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+  border-radius: 2px;
+  transition: width 1s linear;
+}
+.timer-progress-fill.warning { background: linear-gradient(90deg, var(--orange), var(--warning)); }
+.timer-progress-fill.danger  { background: var(--danger); }
+
+.timer-warning-msg { font-size: 0.7rem; letter-spacing: 1px; color: var(--warning); }
+.timer-danger-msg  { font-size: 0.7rem; letter-spacing: 1px; color: var(--danger); animation: pulse 1s infinite; }
+
+.timer-progress-count { font-size: 1.6rem; letter-spacing: 2px; text-align: right; }

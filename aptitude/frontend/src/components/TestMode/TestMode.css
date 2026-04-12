@@ -1,0 +1,104 @@
+/* src/components/TestMode/TestMode.css */
+.test-mode { max-width: 860px; margin: 0 auto; padding: 1.5rem 2rem 4rem; }
+
+/* Navigation dots */
+.test-nav-dots {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.nav-dot {
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-dot:hover { border-color: rgba(251,121,11,0.4); color: var(--text); }
+.nav-dot.current {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: rgba(251,121,11,0.12);
+}
+.nav-dot.answered {
+  background: rgba(18,5,173,0.25);
+  border-color: rgba(18,5,173,0.5);
+  color: #7dd3fc;
+}
+.nav-dot.current.answered {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: rgba(251,121,11,0.12);
+}
+
+/* Question wrap */
+.test-question-wrap { }
+
+/* Bottom nav */
+.test-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.test-nav-center { flex: 1; text-align: center; }
+.unanswered-hint { font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; }
+
+/* Confirm overlay */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,8,16,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+}
+.confirm-modal {
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem;
+  text-align: center;
+  border-color: rgba(255,255,255,0.15);
+}
+.confirm-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 1.5rem 0;
+}
+.confirm-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .test-mode { padding: 1rem; }
+  .test-nav-bar { flex-wrap: wrap; }
+}

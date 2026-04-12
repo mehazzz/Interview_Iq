@@ -1,0 +1,27 @@
+.container {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+.info { display: flex; justify-content: space-between; align-items: center; }
+.left { display: flex; align-items: center; gap: 0.5rem; }
+.role {
+  font-family: var(--font-mono); font-size: 0.72rem;
+  color: var(--accent-orange); letter-spacing: 1px; text-transform: uppercase;
+}
+.modePill {
+  font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 1.5px;
+  padding: 0.1rem 0.5rem; border-radius: 3px; text-transform: uppercase;
+}
+.practicePill { background: rgba(251,121,11,0.1); color: #fb790b; }
+.testPill     { background: rgba(107,127,227,0.1); color: #6b7fe3; }
+.count { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); }
+.sep   { margin: 0 3px; }
+.track { height: 3px; background: var(--bg-elevated); border-radius: 2px; overflow: hidden; }
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-orange), #ffa040);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(251,121,11,0.5);
+}

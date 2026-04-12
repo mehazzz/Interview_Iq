@@ -1,0 +1,405 @@
+[
+  {
+    "id": "6f8b5087-57cd-4a70-9cf1-ee329c63bcaa",
+    "userId": "ccdade2e-6134-4677-8a56-2d226665852b",
+    "role": "DevOps Engineer",
+    "mode": "practice",
+    "feedback": {
+      "overallScore": 2,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the DevOps Engineer role. There is room to improve answer depth and use of concrete examples.",
+      "dimensionScores": {
+        "contentRelevance": 3,
+        "clarity": 1,
+        "confidence": 2,
+        "structure": 2
+      },
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Where do you see yourself in 3–5 years?",
+          "answerSummary": "I see myself  earning Mubarak money and learning more and more and enjoying our …",
+          "score": 6,
+          "feedback": "Good answer with relevant points. Consider adding a concrete example."
+        },
+        {
+          "question": "How do you handle disagreements with teammates or managers?",
+          "answerSummary": "I first discuss what the problem is then I tried to  make them both understand a…",
+          "score": 6,
+          "feedback": "Good answer with relevant points. Consider adding a concrete example."
+        },
+        {
+          "question": "What are your core technical strengths?",
+          "answerSummary": "good at problem solving I am come mind I will be I know how to use and the many …",
+          "score": 6,
+          "feedback": "Good answer with relevant points. Consider adding a concrete example."
+        }
+      ],
+      "readyForInterview": false
+    },
+    "duration": 448,
+    "questionCount": 3,
+    "score": 2,
+    "savedAt": "2026-04-12T06:51:19.787Z"
+  },
+  {
+    "id": "1ea5c3bb-a0f2-46e8-a742-d7f23372b8db",
+    "userId": null,
+    "role": "Data Scientist",
+    "mode": "test",
+    "feedback": {
+      "overallScore": 1,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Data Scientist role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Tell me about yourself and your background.",
+          "answerSummary": "I am Mehak and I am Mahak currently pursuing B.Tech computer science from RV Uni...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "What are your core technical strengths?",
+          "answerSummary": "I am profession in table and python...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Describe a challenging project you led. What was your approach?",
+          "answerSummary": "what was your approach  project  was faced by many challenges building the struc...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "How do you handle disagreements with teammates or managers?",
+          "answerSummary": "I communicate with each other and understand the problem and then divide the pro...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Walk me through how you'd architect a scalable web application.",
+          "answerSummary": "I would bend a front and back and back and such a way that it is scalable enough...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Tell me about a time you failed. What did you learn?",
+          "answerSummary": "I never fail tried in learn anything...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "How do you stay up-to-date with technology trends?",
+          "answerSummary": "I go through blogs read social media post and...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Where do you see yourself in 3–5 years?",
+          "answerSummary": "in India...",
+          "score": 2,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Can you elaborate on that? I'd love more specific details.",
+          "answerSummary": "I would like to see myself working somewhere...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "What are your core technical strengths?",
+          "answerSummary": "technical strengths are shut up...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        }
+      ]
+    },
+    "duration": 187,
+    "questionCount": 10,
+    "score": 1,
+    "savedAt": "2026-04-11T09:42:41.317Z"
+  },
+  {
+    "id": "70cc0b41-4821-47e6-9e4e-44437fc452bd",
+    "userId": null,
+    "role": "Data Scientist",
+    "mode": "practice",
+    "feedback": {
+      "overallScore": 1,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Data Scientist role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Tell me about yourself and your background.",
+          "answerSummary": "hi myself Mahek and I am currently pursuing B.Tech from Army University...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        }
+      ]
+    },
+    "duration": 41,
+    "questionCount": 1,
+    "score": 1,
+    "savedAt": "2026-04-11T09:39:14.082Z"
+  },
+  {
+    "id": "d01bd166-1ad6-44dd-b0e7-4be68988b833",
+    "role": "Data Scientist",
+    "mode": "practice",
+    "feedback": {
+      "overallScore": 2,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Data Scientist role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Tell me about yourself and your background.",
+          "answerSummary": "hello myself Mehak and I am from Bangalore currently pursuing B.Tech from RB Uni...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        }
+      ]
+    },
+    "duration": 44,
+    "questionCount": 2,
+    "score": 2,
+    "savedAt": "2026-04-10T07:01:53.544Z"
+  },
+  {
+    "id": "799646d2-bca7-4f07-8c70-9b3f76c132d8",
+    "role": "Data Scientist",
+    "mode": "practice",
+    "feedback": {
+      "overallScore": 1,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Data Scientist role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Tell me about yourself and your background.",
+          "answerSummary": "hello I am Nandini hello hello...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "What are your core technical strengths?",
+          "answerSummary": "I am proficient in learning near things and Technical I know Java C language and...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        }
+      ]
+    },
+    "duration": 110,
+    "questionCount": 3,
+    "score": 1,
+    "savedAt": "2026-04-10T04:27:46.518Z"
+  },
+  {
+    "id": "a522128c-98a8-4747-8243-8b08c7536fd9",
+    "role": "Data Scientist",
+    "mode": "practice",
+    "feedback": {
+      "overallScore": 4,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Data Scientist role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Tell me about yourself and your background.",
+          "answerSummary": "I have a major on data science and I know how to use Power bei Tab yellow etc...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "What are your core technical strengths?",
+          "answerSummary": "my questions are data analysis and visualisation I used Python Pandas numbai SQL...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Describe a challenging project you led. What was your approach?",
+          "answerSummary": "I work on a hand it and digital recognition system where I manage both model dev...",
+          "score": 8,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "How do you handle disagreements with teammates or managers?",
+          "answerSummary": "I handle discipments by staying calm and focusing on the problem not the person ...",
+          "score": 8,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Walk me through how you'd architect a scalable web application.",
+          "answerSummary": "I design it with a modular approach front and back and separated back in using A...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Tell me about a time you failed. What did you learn?",
+          "answerSummary": "in one project my model initially gave  low accuracy because I rest the data pre...",
+          "score": 8,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "How do you stay up-to-date with technology trends?",
+          "answerSummary": "I stay updated by following Tech blocks watching YouTube tutorials and explore i...",
+          "score": 6,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "Where do you see yourself in 3–5 years?",
+          "answerSummary": "in the next 3 to 5 years I see myself growing into a skilled full stack develope...",
+          "score": 8,
+          "feedback": "Consider being more specific."
+        }
+      ]
+    },
+    "duration": 449,
+    "questionCount": 8,
+    "score": 4,
+    "savedAt": "2026-04-10T02:03:56.136Z"
+  },
+  {
+    "id": "239154f7-8d45-4a5e-87c1-9b89325a2d43",
+    "role": "Full Stack Engineer",
+    "mode": "test",
+    "feedback": {
+      "overallScore": 1,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Full Stack Engineer role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": [
+        {
+          "question": "Tell me about yourself and your background.",
+          "answerSummary": "hello  so  I useful stack...",
+          "score": 4,
+          "feedback": "Consider being more specific."
+        },
+        {
+          "question": "What are your core technical strengths?",
+          "answerSummary": "python...",
+          "score": 2,
+          "feedback": "Consider being more specific."
+        }
+      ]
+    },
+    "duration": 57,
+    "questionCount": 3,
+    "score": 1,
+    "savedAt": "2026-04-10T01:53:11.595Z"
+  },
+  {
+    "id": "03540e35-5cb0-421e-aad2-fcca3659685b",
+    "role": "Frontend Developer",
+    "mode": "practice",
+    "feedback": {
+      "overallScore": 1,
+      "summary": "The candidate demonstrated developing communication and technical awareness for the Frontend Developer role.",
+      "strengths": [
+        "Articulate communication style",
+        "Shows awareness of core concepts",
+        "Engaged throughout the interview"
+      ],
+      "weaknesses": [
+        "Some answers lacked specific examples",
+        "Could demonstrate deeper technical depth in advanced topics"
+      ],
+      "suggestions": [
+        "Use the STAR method (Situation, Task, Action, Result) for behavioural questions",
+        "Back technical claims with real project examples",
+        "Research industry best practices more deeply"
+      ],
+      "questionBreakdown": []
+    },
+    "duration": 47,
+    "questionCount": 1,
+    "score": 1,
+    "savedAt": "2026-04-10T01:51:36.671Z"
+  }
+]

@@ -1,0 +1,177 @@
+/* AudioRecorder.module.css */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  min-height: 110px;
+}
+
+.unsupported {
+  font-size: 0.78rem;
+  color: #f87171;
+  font-family: var(--font-mono);
+  text-align: center;
+  background: rgba(248,113,113,0.08);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  width: 100%;
+}
+
+.idleState, .recordingState, .loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* ── Mic button ── */
+.micBtn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(251,121,11,0.4);
+  background: rgba(251,121,11,0.08);
+  color: var(--accent-orange);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.micBtn:hover:not(:disabled) {
+  background: rgba(251,121,11,0.18);
+  border-color: var(--accent-orange);
+  transform: scale(1.06);
+  box-shadow: var(--glow-orange);
+}
+.micBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+.micBtn.recording {
+  background: rgba(248,113,113,0.12);
+  border-color: #f87171;
+  color: #f87171;
+}
+
+/* ── Recording state ── */
+.recordingState { position: relative; align-items: center; }
+
+.pulseRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(248,113,113,0.5);
+  animation: pulse-ring 1.3s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes pulse-ring {
+  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+
+/* ── Live transcript ── */
+.liveTranscript {
+  background: var(--bg-elevated);
+  border: 1px solid rgba(251,121,11,0.2);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 1rem;
+  max-width: 100%;
+  width: 100%;
+  text-align: left;
+}
+.liveLabel {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: #f87171;
+  margin-bottom: 0.3rem;
+  background: rgba(248,113,113,0.1);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+.liveTranscript p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Hint ── */
+.hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+/* ── Review ── */
+.reviewState { width: 100%; display: flex; flex-direction: column; gap: 0.625rem; }
+
+.reviewLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  resize: vertical;
+  outline: none;
+  transition: var(--transition);
+  line-height: 1.6;
+}
+.textarea:focus {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(251,121,11,0.08);
+}
+
+.reviewActions { display: flex; gap: 0.75rem; justify-content: flex-end; }
+
+.retryBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.retryBtn:hover { border-color: var(--text-secondary); color: var(--text-primary); }
+
+.submitBtn {
+  padding: 0.5rem 1.25rem;
+  background: var(--accent-orange);
+  color: #000;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.submitBtn:hover:not(:disabled) { box-shadow: var(--glow-orange); transform: translateY(-1px); }
+.submitBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.error {
+  font-size: 0.78rem;
+  color: #f87171;
+  font-family: var(--font-mono);
+  text-align: center;
+}

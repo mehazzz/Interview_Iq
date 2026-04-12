@@ -1,0 +1,192 @@
+/* FeedbackPanel.module.css */
+/* ── Dimension scores ── */
+.dimensionsCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dimGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.dimRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dimHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.dimLabel {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.dimScore {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.dimTrack {
+  height: 5px;
+  background: var(--bg-elevated);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dimFill {
+  height: 100%;
+  border-radius: 3px;
+  min-width: 3px;
+}
+
+.dimDesc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.panel {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  display: flex; flex-direction: column; gap: 2rem;
+}
+
+.header { text-align: center; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 3px; color: var(--accent-orange); margin-bottom: 0.5rem;
+}
+.title {
+  font-family: var(--font-display); font-size: 2.2rem;
+  letter-spacing: 2px; color: var(--text-primary);
+}
+.headerMeta {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 0.5rem; margin-top: 0.625rem;
+}
+.roleTag {
+  padding: 0.25rem 0.875rem;
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-orange);
+}
+.modeTag {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono); font-size: 0.68rem;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.practiceTag { background: rgba(251,121,11,0.1); color: #fb790b; border: 1px solid rgba(251,121,11,0.25); }
+.testTag     { background: rgba(107,127,227,0.1); color: #6b7fe3; border: 1px solid rgba(107,127,227,0.3); }
+.readyTag {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full); border: 1px solid;
+  font-family: var(--font-mono); font-size: 0.68rem;
+}
+
+/* ── Score ── */
+.scoreSection {
+  display: flex; align-items: center; gap: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.scoreRing { position: relative; flex-shrink: 0; width: 80px; height: 80px; }
+.ringsvg { width: 80px; height: 80px; transform: rotate(-90deg); }
+.ringBg  { fill: none; stroke: var(--bg-elevated); stroke-width: 6; }
+.ringFill { fill: none; stroke-width: 6; stroke-linecap: round; }
+.scoreNumber {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  font-family: var(--font-display); line-height: 1;
+}
+.scoreNumber span { font-size: 1.5rem; }
+.scoreNumber small { font-size: 0.62rem; color: var(--text-muted); margin-top: 2px; }
+.summary { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
+
+/* ── S/W ── */
+.swGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 560px) { .swGrid { grid-template-columns: 1fr; } }
+.swCard {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md); padding: 1.125rem;
+  display: flex; flex-direction: column; gap: 0.625rem;
+}
+.swTitle { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 1.5px; }
+.swList { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+.swList li {
+  font-size: 0.875rem; color: var(--text-secondary);
+  padding-left: 0.875rem; position: relative;
+}
+.swList li::before { content: '·'; position: absolute; left: 0; color: var(--text-muted); }
+
+/* ── Suggestions ── */
+.suggestions { display: flex; flex-direction: column; gap: 0.625rem; }
+.sectionLabel {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 3px; color: var(--text-muted); margin-bottom: 0.25rem;
+}
+.suggestion {
+  display: flex; gap: 0.75rem; align-items: flex-start;
+  padding: 0.7rem 0.9rem;
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem; color: var(--text-secondary);
+}
+.sugIcon { color: var(--accent-orange); flex-shrink: 0; }
+
+/* ── Breakdown ── */
+.breakdown { display: flex; flex-direction: column; gap: 0.625rem; }
+.bqCard {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md); padding: 0.875rem 1.125rem;
+  display: flex; flex-direction: column; gap: 0.35rem;
+}
+.bqHeader { display: flex; justify-content: space-between; align-items: center; }
+.bqNumber { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted); letter-spacing: 1px; }
+.bqScore  { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; }
+.bqQ      { font-size: 0.875rem; color: var(--text-primary); font-weight: 500; }
+.bqFeedback { font-size: 0.82rem; color: var(--text-secondary); }
+
+/* ── Actions ── */
+.actions { display: flex; justify-content: center; gap: 0.875rem; flex-wrap: wrap; padding-top: 0.25rem; }
+
+.historyBtn {
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.historyBtn:hover { border-color: var(--accent-orange); color: var(--accent-orange); }
+
+.restartBtn {
+  padding: 0.8rem 1.75rem;
+  background: var(--accent-orange); color: #000;
+  border: none; border-radius: var(--radius-full);
+  font-family: var(--font-display); font-size: 0.95rem; letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: var(--glow-orange);
+  transition: var(--transition);
+}
+.restartBtn:hover { transform: translateY(-2px); }

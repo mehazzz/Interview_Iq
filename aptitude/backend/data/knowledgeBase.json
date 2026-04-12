@@ -1,0 +1,627 @@
+{
+  "time_work": {
+    "id": "time_work",
+    "title": "Time & Work",
+    "icon": "⚙️",
+    "concepts": [
+      "If A can complete a work in N days, A's 1-day work = 1/N",
+      "Combined work rate = sum of individual rates",
+      "If A is twice as efficient as B, A takes half the time B takes",
+      "Work = Rate × Time"
+    ],
+    "formulas": [
+      { "name": "1-day work", "formula": "1/N", "description": "Work done in 1 day if total time is N days" },
+      { "name": "Combined time", "formula": "AB/(A+B)", "description": "Time for A & B together if A takes 'a' days and B takes 'b' days" },
+      { "name": "Remaining work", "formula": "1 - (days_worked / total_days)", "description": "Fraction of work remaining" }
+    ],
+    "templates": [
+      {
+        "id": "tw_01",
+        "type": "two_person",
+        "difficulty": ["easy", "medium"],
+        "text": "A can complete a work in {X} days and B can complete the same work in {Y} days. How many days will they take to complete the work together?",
+        "vars": { "X": [6, 8, 10, 12, 15, 18, 20], "Y": [8, 10, 12, 15, 20, 24, 30] },
+        "solution": "combined_time"
+      },
+      {
+        "id": "tw_02",
+        "type": "three_person",
+        "difficulty": ["medium", "hard"],
+        "text": "A can do a piece of work in {X} days, B in {Y} days, and C in {Z} days. In how many days will all three complete the work together?",
+        "vars": { "X": [6, 8, 10, 12], "Y": [8, 10, 12, 15], "Z": [12, 15, 20, 24] },
+        "solution": "three_person_combined"
+      },
+      {
+        "id": "tw_03",
+        "type": "remaining_work",
+        "difficulty": ["medium", "hard"],
+        "text": "A can complete a work in {X} days. After working for {D} days, A leaves. B joins and completes the remaining work in {B} days. How many days would B alone take to finish the entire work?",
+        "vars": { "X": [10, 12, 15, 20], "D": [2, 3, 4, 5], "B": [5, 6, 8, 10] },
+        "solution": "remaining_solo"
+      },
+      {
+        "id": "tw_04",
+        "type": "efficiency",
+        "difficulty": ["easy"],
+        "text": "A is {K} times as efficient as B. If B alone can complete the work in {Y} days, how many days will A alone take?",
+        "vars": { "K": [2, 3, 4], "Y": [12, 18, 24, 30] },
+        "solution": "efficiency"
+      },
+      {
+        "id": "tw_05",
+        "type": "alternating",
+        "difficulty": ["hard"],
+        "text": "A and B can do a work in {X} and {Y} days respectively. They work on alternate days starting with A. In how many days will the work be completed?",
+        "vars": { "X": [6, 8, 10], "Y": [8, 10, 12] },
+        "solution": "alternating"
+      }
+    ]
+  },
+
+  "speed_distance": {
+    "id": "speed_distance",
+    "title": "Time, Speed & Distance",
+    "icon": "🚀",
+    "concepts": [
+      "Speed = Distance / Time",
+      "Average speed = Total Distance / Total Time",
+      "Relative speed (same direction) = |S1 - S2|",
+      "Relative speed (opposite direction) = S1 + S2",
+      "Convert km/h to m/s: multiply by 5/18"
+    ],
+    "formulas": [
+      { "name": "Speed", "formula": "Distance / Time", "description": "Basic speed formula" },
+      { "name": "Time", "formula": "Distance / Speed", "description": "Time taken to cover distance" },
+      { "name": "Distance", "formula": "Speed × Time", "description": "Distance covered" },
+      { "name": "Average Speed", "formula": "2×S1×S2/(S1+S2)", "description": "For equal distances at two speeds" }
+    ],
+    "templates": [
+      {
+        "id": "sd_01",
+        "type": "basic",
+        "difficulty": ["easy"],
+        "text": "A car travels {D} km in {T} hours. What is its speed in km/h?",
+        "vars": { "D": [120, 150, 180, 200, 240, 300], "T": [2, 3, 4, 5, 6] },
+        "solution": "basic_speed"
+      },
+      {
+        "id": "sd_02",
+        "type": "average_speed",
+        "difficulty": ["medium"],
+        "text": "A person travels from A to B at {S1} km/h and returns at {S2} km/h. What is the average speed for the entire journey?",
+        "vars": { "S1": [30, 40, 50, 60], "S2": [40, 60, 80, 90] },
+        "solution": "avg_speed"
+      },
+      {
+        "id": "sd_03",
+        "type": "relative_opposite",
+        "difficulty": ["medium"],
+        "text": "Two trains of lengths {L1} m and {L2} m are moving towards each other at {S1} km/h and {S2} km/h respectively. In how many seconds will they completely cross each other?",
+        "vars": { "L1": [100, 120, 150, 200], "L2": [80, 100, 120, 150], "S1": [40, 50, 60], "S2": [30, 40, 50] },
+        "solution": "trains_opposite"
+      },
+      {
+        "id": "sd_04",
+        "type": "catch_up",
+        "difficulty": ["hard"],
+        "text": "A thief runs at {ST} km/h and a policeman chases at {SP} km/h. The thief had a {HEAD} minute head start. In how many minutes will the policeman catch the thief?",
+        "vars": { "ST": [6, 8, 10], "SP": [8, 10, 12], "HEAD": [5, 10, 15, 20] },
+        "solution": "catch_up"
+      },
+      {
+        "id": "sd_05",
+        "type": "platform",
+        "difficulty": ["medium"],
+        "text": "A train of length {L} m crosses a platform of length {P} m in {T} seconds. What is the speed of the train in km/h?",
+        "vars": { "L": [100, 120, 150, 200], "P": [80, 100, 150, 200], "T": [10, 15, 18, 20, 25] },
+        "solution": "platform_speed"
+      }
+    ]
+  },
+
+  "profit_loss": {
+    "id": "profit_loss",
+    "title": "Profit & Loss",
+    "icon": "💰",
+    "concepts": [
+      "Profit = Selling Price - Cost Price",
+      "Loss = Cost Price - Selling Price",
+      "Profit% = (Profit / CP) × 100",
+      "SP = CP × (1 + Profit%/100)",
+      "Marked Price is the listed price before discount"
+    ],
+    "formulas": [
+      { "name": "Profit %", "formula": "(SP - CP) / CP × 100", "description": "Percentage profit on cost price" },
+      { "name": "SP from Profit%", "formula": "CP × (100 + P%) / 100", "description": "Selling price given profit percent" },
+      { "name": "CP from Profit%", "formula": "SP × 100 / (100 + P%)", "description": "Cost price given selling price and profit %" },
+      { "name": "Discount", "formula": "(MP - SP) / MP × 100", "description": "Discount percent on marked price" }
+    ],
+    "templates": [
+      {
+        "id": "pl_01",
+        "type": "basic_profit",
+        "difficulty": ["easy"],
+        "text": "A shopkeeper buys an article for ₹{CP} and sells it for ₹{SP}. What is the profit percentage?",
+        "vars": { "CP": [100, 120, 150, 200, 250], "SP_MARGIN": [10, 15, 20, 25, 30] },
+        "solution": "basic_profit_pct"
+      },
+      {
+        "id": "pl_02",
+        "type": "find_sp",
+        "difficulty": ["easy", "medium"],
+        "text": "A trader buys goods for ₹{CP} and wants to earn a profit of {P}%. At what price should he sell?",
+        "vars": { "CP": [200, 250, 300, 400, 500], "P": [10, 15, 20, 25] },
+        "solution": "find_sp"
+      },
+      {
+        "id": "pl_03",
+        "type": "discount",
+        "difficulty": ["medium"],
+        "text": "The marked price of an article is ₹{MP}. A discount of {D}% is offered. What is the selling price? Also find the profit% if the cost price is ₹{CP}.",
+        "vars": { "MP": [400, 500, 600, 800], "D": [10, 15, 20, 25], "CP_RATIO": [0.6, 0.65, 0.7, 0.75] },
+        "solution": "discount_profit"
+      },
+      {
+        "id": "pl_04",
+        "type": "successive_discount",
+        "difficulty": ["hard"],
+        "text": "A shopkeeper marks his goods {M}% above cost price and then gives {D}% discount. What is the overall profit or loss percentage?",
+        "vars": { "M": [20, 25, 30, 40, 50], "D": [10, 15, 20, 25] },
+        "solution": "successive"
+      },
+      {
+        "id": "pl_05",
+        "type": "loss",
+        "difficulty": ["easy"],
+        "text": "An item is sold for ₹{SP} at a loss of {L}%. What is the cost price?",
+        "vars": { "SP": [180, 240, 320, 400, 480], "L": [10, 15, 20, 25] },
+        "solution": "find_cp_from_loss"
+      }
+    ]
+  },
+
+  "percentage": {
+    "id": "percentage",
+    "title": "Percentage",
+    "icon": "📊",
+    "concepts": [
+      "Percent means per hundred",
+      "x% of y = (x/100) × y",
+      "If A is x% more than B, then B is (100x/(100+x))% less than A",
+      "Percentage change = (Change/Original) × 100"
+    ],
+    "formulas": [
+      { "name": "Percentage", "formula": "(Part/Whole) × 100", "description": "Find what percent part is of whole" },
+      { "name": "Value from %", "formula": "(P% × Base) / 100", "description": "Find value given base and percent" },
+      { "name": "% Change", "formula": "((New - Old) / Old) × 100", "description": "Percentage increase or decrease" }
+    ],
+    "templates": [
+      {
+        "id": "pct_01",
+        "type": "basic",
+        "difficulty": ["easy"],
+        "text": "What is {P}% of {N}?",
+        "vars": { "P": [10, 15, 20, 25, 30, 40, 50], "N": [200, 300, 400, 500, 600, 800] },
+        "solution": "basic_pct"
+      },
+      {
+        "id": "pct_02",
+        "type": "increase_decrease",
+        "difficulty": ["medium"],
+        "text": "A number is increased by {P}% and then decreased by {Q}%. What is the net percentage change?",
+        "vars": { "P": [10, 15, 20, 25], "Q": [10, 15, 20, 25] },
+        "solution": "net_change"
+      },
+      {
+        "id": "pct_03",
+        "type": "population",
+        "difficulty": ["medium"],
+        "text": "The population of a town is {N}. It increases by {P}% in the first year and decreases by {Q}% in the second year. What is the population after 2 years?",
+        "vars": { "N": [10000, 20000, 50000, 100000], "P": [10, 15, 20], "Q": [5, 10, 15] },
+        "solution": "population"
+      }
+    ]
+  },
+
+  "ratio_proportion": {
+    "id": "ratio_proportion",
+    "title": "Ratio & Proportion",
+    "icon": "⚖️",
+    "concepts": [
+      "Ratio a:b means a/b",
+      "If a:b = c:d, then ad = bc (cross multiplication)",
+      "Mean proportion of a and b = √(ab)",
+      "Componendo-Dividendo: if a/b = c/d, then (a+b)/(a-b) = (c+d)/(c-d)"
+    ],
+    "formulas": [
+      { "name": "Proportion", "formula": "a/b = c/d → ad = bc", "description": "Cross multiplication rule" },
+      { "name": "Mean Proportion", "formula": "√(a×b)", "description": "Mean proportion between a and b" }
+    ],
+    "templates": [
+      {
+        "id": "rp_01",
+        "type": "divide",
+        "difficulty": ["easy"],
+        "text": "Divide ₹{TOTAL} between A and B in the ratio {R1}:{R2}. How much does each get?",
+        "vars": { "TOTAL": [100, 200, 300, 400, 500, 1000], "R1": [1, 2, 3, 4], "R2": [2, 3, 4, 5] },
+        "solution": "divide_ratio"
+      },
+      {
+        "id": "rp_02",
+        "type": "three_way",
+        "difficulty": ["medium"],
+        "text": "A sum of ₹{TOTAL} is divided among A, B, and C in the ratio {R1}:{R2}:{R3}. What is B's share?",
+        "vars": { "TOTAL": [600, 900, 1200, 1500], "R1": [1, 2, 3], "R2": [2, 3, 4], "R3": [3, 4, 5] },
+        "solution": "three_way_ratio"
+      }
+    ]
+  },
+
+  "averages": {
+    "id": "averages",
+    "title": "Averages",
+    "icon": "📈",
+    "concepts": [
+      "Average = Sum of observations / Number of observations",
+      "If average of n numbers is A, sum = n × A",
+      "Weighted average accounts for frequency of each value"
+    ],
+    "formulas": [
+      { "name": "Average", "formula": "Sum / Count", "description": "Arithmetic mean" },
+      { "name": "New Average", "formula": "Old Sum ± New Value / New Count", "description": "Average after adding/removing an element" }
+    ],
+    "templates": [
+      {
+        "id": "avg_01",
+        "type": "basic",
+        "difficulty": ["easy"],
+        "text": "The average of {N} numbers is {A}. If one number {OLD} is replaced by {NEW}, what is the new average?",
+        "vars": { "N": [5, 6, 8, 10], "A": [20, 25, 30, 40], "OLD": [10, 15, 20], "NEW": [30, 35, 40] },
+        "solution": "replacement_avg"
+      },
+      {
+        "id": "avg_02",
+        "type": "cricket",
+        "difficulty": ["medium"],
+        "text": "A batsman's average in {M} matches was {A}. After {NM} more matches, his average increased by {INC}. How many runs did he score in the last {NM} matches?",
+        "vars": { "M": [10, 15, 20], "A": [30, 40, 50], "NM": [2, 3, 5], "INC": [2, 3, 4] },
+        "solution": "cricket_avg"
+      }
+    ]
+  },
+
+  "number_system": {
+    "id": "number_system",
+    "title": "Number System",
+    "icon": "🔢",
+    "concepts": [
+      "Natural numbers: 1, 2, 3, ...",
+      "Divisibility rules for 2, 3, 4, 5, 6, 8, 9, 11",
+      "LCM × HCF = Product of two numbers",
+      "A number is prime if divisible only by 1 and itself"
+    ],
+    "formulas": [
+      { "name": "LCM × HCF", "formula": "LCM × HCF = A × B", "description": "Product rule for two numbers" },
+      { "name": "Sum of first n naturals", "formula": "n(n+1)/2", "description": "1+2+3+...+n" },
+      { "name": "Sum of squares", "formula": "n(n+1)(2n+1)/6", "description": "1²+2²+...+n²" }
+    ],
+    "templates": [
+      {
+        "id": "ns_01",
+        "type": "lcm_hcf",
+        "difficulty": ["easy", "medium"],
+        "text": "The HCF of two numbers is {H} and their LCM is {L}. If one number is {A}, what is the other?",
+        "vars": { "H": [4, 6, 8, 12], "L_MULT": [6, 8, 10, 12], "A_MULT": [2, 3, 4] },
+        "solution": "lcm_hcf_find"
+      },
+      {
+        "id": "ns_02",
+        "type": "divisibility",
+        "difficulty": ["medium"],
+        "text": "What is the largest {DIGIT}-digit number divisible by {D}?",
+        "vars": { "DIGIT": [3, 4, 5], "D": [6, 7, 8, 9, 11, 12] },
+        "solution": "largest_divisible"
+      }
+    ]
+  },
+
+  "permutations_combinations": {
+    "id": "permutations_combinations",
+    "title": "Permutations & Combinations",
+    "icon": "🔀",
+    "concepts": [
+      "nPr = n!/(n-r)! — ordered arrangements",
+      "nCr = n!/(r!(n-r)!) — unordered selections",
+      "Permutations with repetition = n^r",
+      "Total subsets of n items = 2^n"
+    ],
+    "formulas": [
+      { "name": "Permutation", "formula": "nPr = n!/(n-r)!", "description": "Arrangements of r items from n" },
+      { "name": "Combination", "formula": "nCr = n!/r!(n-r)!", "description": "Selections of r items from n" }
+    ],
+    "templates": [
+      {
+        "id": "pc_01",
+        "type": "arrangement",
+        "difficulty": ["easy"],
+        "text": "In how many ways can {N} people be arranged in a row?",
+        "vars": { "N": [3, 4, 5, 6] },
+        "solution": "factorial"
+      },
+      {
+        "id": "pc_02",
+        "type": "selection",
+        "difficulty": ["medium"],
+        "text": "From a group of {N} people, in how many ways can a committee of {R} be selected?",
+        "vars": { "N": [5, 6, 7, 8, 10], "R": [2, 3, 4] },
+        "solution": "combination"
+      },
+      {
+        "id": "pc_03",
+        "type": "word",
+        "difficulty": ["medium"],
+        "text": "How many {LEN}-letter words can be formed from the letters of '{WORD}' without repetition?",
+        "vars": { "WORD": ["MASTER", "SIMPLE", "BRAIN", "LOGIC", "SMART"], "LEN": [2, 3, 4] },
+        "solution": "word_perm"
+      }
+    ]
+  },
+
+  "probability": {
+    "id": "probability",
+    "title": "Probability",
+    "icon": "🎲",
+    "concepts": [
+      "P(event) = Favorable outcomes / Total outcomes",
+      "P(A or B) = P(A) + P(B) - P(A and B)",
+      "P(A and B) = P(A) × P(B) for independent events",
+      "P(not A) = 1 - P(A)"
+    ],
+    "formulas": [
+      { "name": "Basic Probability", "formula": "Favorable / Total", "description": "Classic probability definition" },
+      { "name": "Addition Rule", "formula": "P(A∪B) = P(A) + P(B) - P(A∩B)", "description": "Probability of A or B" }
+    ],
+    "templates": [
+      {
+        "id": "prob_01",
+        "type": "cards",
+        "difficulty": ["easy"],
+        "text": "A card is drawn from a well-shuffled deck of 52 cards. What is the probability of drawing a {SUIT}?",
+        "vars": { "SUIT": ["heart", "spade", "club", "diamond", "king", "queen", "ace", "red card", "face card"] },
+        "solution": "card_prob"
+      },
+      {
+        "id": "prob_02",
+        "type": "dice",
+        "difficulty": ["easy", "medium"],
+        "text": "Two dice are thrown simultaneously. What is the probability that the sum is {SUM}?",
+        "vars": { "SUM": [5, 6, 7, 8, 9, 10] },
+        "solution": "dice_prob"
+      },
+      {
+        "id": "prob_03",
+        "type": "balls",
+        "difficulty": ["medium"],
+        "text": "A bag contains {R} red balls, {G} green balls, and {B} blue balls. A ball is drawn at random. What is the probability it is {COLOR}?",
+        "vars": { "R": [3, 4, 5, 6], "G": [2, 3, 4, 5], "B": [1, 2, 3, 4], "COLOR": ["red", "green", "blue", "not red"] },
+        "solution": "balls_prob"
+      }
+    ]
+  },
+
+  "mixtures_alligations": {
+    "id": "mixtures_alligations",
+    "title": "Mixtures & Alligations",
+    "icon": "🧪",
+    "concepts": [
+      "Alligation: Mix two items at different prices to get a mixture at mean price",
+      "Ratio = (Higher price - Mean price) : (Mean price - Lower price)",
+      "Rule of alligation finds ratio of mixing"
+    ],
+    "formulas": [
+      { "name": "Alligation Ratio", "formula": "(d-m):(m-c)", "description": "Ratio of cheaper (c) to dearer (d) at mean (m)" }
+    ],
+    "templates": [
+      {
+        "id": "ma_01",
+        "type": "alligation",
+        "difficulty": ["medium"],
+        "text": "In what ratio must tea at ₹{C}/kg be mixed with tea at ₹{D}/kg so that the mixture costs ₹{M}/kg?",
+        "vars": { "C": [20, 25, 30, 40], "D_ADD": [10, 15, 20, 25], "M_ADD": [4, 5, 6, 8] },
+        "solution": "alligation_ratio"
+      },
+      {
+        "id": "ma_02",
+        "type": "milk_water",
+        "difficulty": ["hard"],
+        "text": "A vessel contains {L} litres of milk. {R} litres are removed and replaced with water. This process is repeated {TIMES} times. What fraction of milk remains?",
+        "vars": { "L": [10, 12, 15, 20], "R": [2, 3, 4, 5], "TIMES": [2, 3] },
+        "solution": "milk_water"
+      }
+    ]
+  },
+
+  "simplification": {
+    "id": "simplification",
+    "title": "Simplification",
+    "icon": "🔣",
+    "concepts": [
+      "BODMAS: Brackets → Orders → Division → Multiplication → Addition → Subtraction",
+      "Surds and indices rules",
+      "Fractions and decimals simplification"
+    ],
+    "formulas": [
+      { "name": "BODMAS", "formula": "B → O → D → M → A → S", "description": "Order of operations" },
+      { "name": "Square Identity", "formula": "(a+b)² = a² + 2ab + b²", "description": "Algebraic identity" }
+    ],
+    "templates": [
+      {
+        "id": "simp_01",
+        "type": "bodmas",
+        "difficulty": ["easy", "medium", "hard"],
+        "text": "Simplify: {A} + {B} × {C} - {D} ÷ {E}",
+        "vars": { "A": [10, 15, 20, 25], "B": [3, 4, 5], "C": [4, 5, 6], "D": [12, 18, 24], "E": [3, 4, 6] },
+        "solution": "bodmas_calc"
+      }
+    ]
+  },
+
+  "logical_reasoning": {
+    "id": "logical_reasoning",
+    "title": "Logical Reasoning",
+    "icon": "🧩",
+    "concepts": [
+      "Syllogisms: All A are B, Some A are B, No A are B",
+      "Statements and conclusions",
+      "Assumptions and inferences"
+    ],
+    "formulas": [
+      { "name": "Syllogism Rule 1", "formula": "All A→B, All B→C ∴ All A→C", "description": "Transitive syllogism" }
+    ],
+    "templates": [
+      {
+        "id": "lr_01",
+        "type": "syllogism",
+        "difficulty": ["medium"],
+        "text": "Statements: All {A} are {B}. All {B} are {C}. Conclusion I: All {A} are {C}. Conclusion II: Some {C} are {A}. Which conclusion(s) follow?",
+        "vars": {
+          "SETS": [
+            ["cats", "animals", "living beings"],
+            ["roses", "flowers", "plants"],
+            ["doctors", "graduates", "educated"],
+            ["tables", "furniture", "wooden items"],
+            ["buses", "vehicles", "machines"]
+          ]
+        },
+        "solution": "syllogism"
+      }
+    ]
+  },
+
+  "blood_relations": {
+    "id": "blood_relations",
+    "title": "Blood Relations",
+    "icon": "👨‍👩‍👧‍👦",
+    "concepts": [
+      "Draw family trees to solve relations",
+      "Mother's brother = Maternal Uncle",
+      "Father's sister = Aunt",
+      "Paternal/Maternal distinction is key"
+    ],
+    "formulas": [],
+    "templates": [
+      {
+        "id": "br_01",
+        "type": "two_step",
+        "difficulty": ["easy", "medium", "hard"],
+        "text": "Pointing to {NAME1}, {NAME2} said, '{RELATION1} is the {RELATION2} of my {RELATION3}.' How is {NAME1} related to {NAME2}?",
+        "vars": {
+          "PUZZLES": [
+            { "name1": "a man", "name2": "a woman", "r1": "His mother", "r2": "sister", "r3": "father", "answer": "Uncle", "explanation": "Woman's father's sister = Aunt. Man's mother is the sister of woman's father → the man's mother is woman's aunt → man is woman's cousin. Actually: his mother = sister of my father → he is my father's sister's son = my cousin." },
+            { "name1": "a boy", "name2": "a girl", "r1": "His father", "r2": "only son", "r3": "grandfather", "answer": "Brother", "explanation": "Girl's grandfather's only son = girl's father. So the boy's father = girl's father → they are siblings." }
+          ]
+        },
+        "solution": "blood_relations"
+      }
+    ]
+  },
+
+  "coding_decoding": {
+    "id": "coding_decoding",
+    "title": "Coding-Decoding",
+    "icon": "🔐",
+    "concepts": [
+      "Letter shift coding: each letter shifted by fixed number",
+      "Position-based coding: A=1, B=2, ..., Z=26",
+      "Reverse coding: A=Z, B=Y, etc.",
+      "Pattern identification is key"
+    ],
+    "formulas": [
+      { "name": "Position", "formula": "A=1, B=2, ..., Z=26", "description": "Alphabetical position values" }
+    ],
+    "templates": [
+      {
+        "id": "cd_01",
+        "type": "shift",
+        "difficulty": ["easy", "medium"],
+        "text": "In a certain code, '{WORD}' is written as '{CODED}'. Using the same code, what is the code for '{TARGET}'?",
+        "vars": {
+          "SHIFT": [1, 2, 3, 4, 5],
+          "WORDS": ["CAT", "DOG", "SUN", "BOOK", "STAR", "MOON", "FISH", "BIRD"]
+        },
+        "solution": "shift_code"
+      }
+    ]
+  },
+
+  "series": {
+    "id": "series",
+    "title": "Series (Number/Alphabet)",
+    "icon": "🔗",
+    "concepts": [
+      "Arithmetic progression: common difference between terms",
+      "Geometric progression: common ratio between terms",
+      "Square/Cube series",
+      "Mixed series: combine two patterns"
+    ],
+    "formulas": [
+      { "name": "AP nth term", "formula": "a + (n-1)d", "description": "nth term of arithmetic progression" },
+      { "name": "GP nth term", "formula": "a × r^(n-1)", "description": "nth term of geometric progression" }
+    ],
+    "templates": [
+      {
+        "id": "ser_01",
+        "type": "ap",
+        "difficulty": ["easy"],
+        "text": "Find the next term: {SERIES}",
+        "vars": { "START": [1, 2, 3, 4, 5], "DIFF": [2, 3, 4, 5, 6, 7], "TERMS": 5 },
+        "solution": "ap_series"
+      },
+      {
+        "id": "ser_02",
+        "type": "gp",
+        "difficulty": ["medium"],
+        "text": "Find the missing term: {SERIES}",
+        "vars": { "START": [1, 2, 3, 4], "RATIO": [2, 3, 4], "TERMS": 5, "MISSING": [2, 3, 4] },
+        "solution": "gp_series"
+      },
+      {
+        "id": "ser_03",
+        "type": "squares",
+        "difficulty": ["medium"],
+        "text": "Find the next term in the series: {SERIES}",
+        "vars": { "START": [1, 2, 3], "TERMS": 5 },
+        "solution": "squares_series"
+      }
+    ]
+  },
+
+  "data_interpretation": {
+    "id": "data_interpretation",
+    "title": "Data Interpretation",
+    "icon": "📉",
+    "concepts": [
+      "Read bar charts, pie charts, line graphs accurately",
+      "Calculate percentage share, growth rate",
+      "Compare across categories and years"
+    ],
+    "formulas": [
+      { "name": "Growth Rate", "formula": "(New - Old) / Old × 100", "description": "Year-on-year growth" },
+      { "name": "Share", "formula": "Part / Total × 100", "description": "Percentage share" }
+    ],
+    "templates": [
+      {
+        "id": "di_01",
+        "type": "table",
+        "difficulty": ["medium"],
+        "text": "The table shows sales of a company: {TABLE_DESC}. {QUESTION}",
+        "vars": {
+          "YEARS": [2019, 2020, 2021, 2022, 2023],
+          "BASE": [100, 120, 150, 200],
+          "GROWTH": [5, 8, 10, 12, 15]
+        },
+        "solution": "di_table"
+      }
+    ]
+  }
+}

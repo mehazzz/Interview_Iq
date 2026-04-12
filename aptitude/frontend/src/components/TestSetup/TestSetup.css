@@ -1,0 +1,162 @@
+/* src/components/TestSetup/TestSetup.css */
+.test-setup { padding: 1.5rem 2rem 4rem; max-width: 1100px; margin: 0 auto; }
+
+.test-setup-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.test-setup-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ── Topic Panel ── */
+.setup-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.setup-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.setup-panel-header h3 {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.topic-select-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.topic-select-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 0.75rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+  overflow: hidden;
+}
+.topic-select-card:hover { border-color: rgba(251,121,11,0.4); background: var(--surface3); }
+.topic-select-card.selected {
+  border-color: var(--orange);
+  background: rgba(251,121,11,0.1);
+}
+.topic-select-card.weak { border-color: rgba(239,68,68,0.3); }
+.topic-select-card.selected.weak { border-color: var(--orange); }
+
+.topic-select-icon { font-size: 1.4rem; }
+.topic-select-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.3;
+}
+.topic-weak-dot {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--danger);
+}
+.topic-check {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.selection-summary {
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+/* ── Settings ── */
+.setup-settings { display: grid; gap: 1rem; }
+
+.settings-group { padding: 1.25rem; }
+.settings-group-title {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.settings-options { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.settings-opt {
+  flex: 1;
+  min-width: 60px;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  text-transform: uppercase;
+}
+.settings-opt:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.settings-opt.active.easy   { border-color: var(--success); color: var(--success); background: rgba(34,197,94,0.1); }
+.settings-opt.active.medium { border-color: var(--orange); color: var(--orange); background: rgba(251,121,11,0.1); }
+.settings-opt.active.hard   { border-color: var(--danger); color: var(--danger); background: rgba(239,68,68,0.1); }
+.settings-opt-icon { font-size: 0.8rem; }
+
+/* Summary */
+.test-summary { padding: 1.25rem; }
+.summary-rows { display: grid; gap: 0.6rem; }
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.summary-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+@media (max-width: 900px) {
+  .test-setup-grid { grid-template-columns: 1fr; }
+  .setup-settings { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .test-setup { padding: 1rem; }
+  .setup-settings { grid-template-columns: 1fr; }
+}

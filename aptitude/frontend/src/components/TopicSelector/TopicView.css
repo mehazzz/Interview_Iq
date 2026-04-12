@@ -1,0 +1,43 @@
+/* src/components/TopicSelector/TopicView.css */
+.topic-view { position: relative; z-index: 1; }
+
+.topic-view-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.topic-view-title {
+  display: flex; align-items: center;
+  gap: 0.75rem; flex: 1;
+}
+.topic-view-icon { font-size: 2rem; }
+
+.topic-mode-tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.topic-mode-tab {
+  display: flex; align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  background: none; border: none;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600; letter-spacing: 2px;
+  cursor: pointer; transition: var(--transition);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.topic-mode-tab:hover { color: var(--text); }
+.topic-mode-tab.active {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+.topic-view-content { padding-top: 1.5rem; }

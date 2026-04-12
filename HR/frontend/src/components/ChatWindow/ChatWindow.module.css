@@ -1,0 +1,179 @@
+/* ChatWindow.module.css */
+
+.window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* ── Message row ── */
+.message { display: flex; gap: 0.75rem; max-width: 84%; }
+.aiMessage   { align-self: flex-start; }
+.userMessage { align-self: flex-end; flex-direction: row-reverse; }
+
+/* ── Avatar ── */
+.avatar {
+  flex-shrink: 0; width: 36px; height: 36px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 0.6rem; font-weight: 500; letter-spacing: 1px;
+}
+.aiAvatar   { background: rgba(251,121,11,0.12); color: var(--accent-orange); border: 1px solid rgba(251,121,11,0.22); }
+.userAvatar { background: rgba(18,5,173,0.2);    color: #6b7fe3;              border: 1px solid rgba(18,5,173,0.35); }
+
+/* ── Bubble ── */
+.bubble { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.text {
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  font-size: 0.925rem;
+  line-height: 1.65;
+}
+.aiMessage .text {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px 14px 14px 14px;
+  color: var(--text-primary);
+}
+.userMessage .text {
+  background: rgba(251,121,11,0.1);
+  border: 1px solid rgba(251,121,11,0.18);
+  border-radius: 14px 4px 14px 14px;
+  color: var(--text-primary);
+}
+
+/* ── Meta badges ── */
+.meta { display: flex; flex-wrap: wrap; gap: 0.3rem; padding-left: 0.2rem; }
+.badge {
+  font-family: var(--font-mono); font-size: 0.62rem;
+  padding: 0.15rem 0.55rem; border-radius: var(--radius-full);
+  background: var(--bg-elevated); color: var(--text-muted);
+  border: 1px solid var(--border-subtle); letter-spacing: 0.5px;
+}
+
+/* ── Hint card ── */
+.hintCard {
+  align-self: flex-end;
+  width: 84%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(251,121,11,0.2);
+  border-left: 3px solid var(--hint-color, #fb790b);
+  border-radius: 0 var(--radius-md) var(--radius-md) var(--radius-md);
+  margin-top: -0.25rem;
+}
+
+.hintHeader {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 0.625rem 0.875rem; background: transparent; border: none;
+  cursor: pointer; gap: 0.75rem;
+}
+.hintHeader:hover { background: rgba(255,255,255,0.02); }
+
+.hintLeft   { display: flex; align-items: center; gap: 0.5rem; }
+.hintIcon   { color: var(--hint-color, #fb790b); font-size: 0.7rem; }
+.hintLabel  { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 2px; color: var(--text-muted); }
+.hintScore  {
+  font-family: var(--font-mono); font-size: 0.65rem; font-weight: 600;
+  padding: 0.1rem 0.5rem; border-radius: 4px; border: 1px solid; background: transparent;
+}
+.hintChevron      { color: var(--text-muted); font-size: 1.1rem; transition: transform 0.2s ease; flex-shrink: 0; }
+.hintChevronOpen  { transform: rotate(90deg); }
+
+.hintBody {
+  padding: 0.25rem 0.875rem 0.875rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+
+.hintRow        { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; }
+.hintRowIcon    { flex-shrink: 0; font-size: 0.75rem; padding-top: 2px; }
+.hintRowText    { flex: 1; }
+
+.hintTips { display: flex; flex-direction: column; gap: 0.3rem; padding-top: 0.125rem; }
+.hintTip  { display: flex; gap: 0.5rem; font-size: 0.8rem; color: var(--text-secondary); align-items: flex-start; }
+.tipBullet { color: var(--hint-color, #fb790b); flex-shrink: 0; font-size: 0.75rem; }
+
+.examplePhrase {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm); padding: 0.5rem 0.75rem;
+  display: flex; flex-direction: column; gap: 0.25rem;
+}
+.exampleLabel { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 2px; color: var(--text-muted); }
+.examplePhrase p { font-size: 0.8rem; color: var(--text-secondary); font-style: italic; line-height: 1.5; }
+
+/* ── NEXT QUESTION — prominent bar at bottom of chat window ── */
+.nextQuestionBar {
+  align-self: center;
+  width: 100%;
+  padding: 0.875rem 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.nextQuestionBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  background: var(--accent-orange);
+  color: #000;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 24px rgba(251,121,11,0.35);
+}
+.nextQuestionBtn:hover:not(:disabled) {
+  box-shadow: 0 0 36px rgba(251,121,11,0.55);
+  transform: translateY(-2px);
+}
+.nextQuestionBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.nextArrow {
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.nextQuestionBtn:not(:disabled):hover .nextArrow { transform: translateX(4px); }
+
+.nextSpinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: nspin 0.7s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+@keyframes nspin { to { transform: rotate(360deg); } }
+
+/* ── Speaking indicator ── */
+.speakingIndicator {
+  display: flex; align-items: center; gap: 0.625rem;
+  padding: 0.5rem 0.875rem; color: var(--accent-orange);
+  font-size: 0.75rem; font-family: var(--font-mono); align-self: flex-start;
+}
+.soundWave { display: flex; align-items: center; gap: 3px; height: 18px; }
+.bar {
+  display: block; width: 3px; background: var(--accent-orange);
+  border-radius: 2px; animation: wave 0.8s ease-in-out infinite alternate;
+}
+@keyframes wave { from { height: 3px; } to { height: 16px; } }
+
+/* ── Thinking dots ── */
+.thinking { display: flex; gap: 5px; padding: 0.625rem 0.875rem; align-self: flex-start; }
+.dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--text-muted);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50%       { opacity: 1;    transform: scale(1); }
+}

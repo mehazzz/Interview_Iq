@@ -1,0 +1,90 @@
+/* styles/globals.css
+   Design tokens matching the Midwam-style dark aesthetic:
+   Deep dark background, orange/amber accent, electric blue, white text
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Design Tokens ──────────────────────────────────── */
+:root {
+  --bg-void:       #060608;
+  --bg-surface:    #0d0d12;
+  --bg-elevated:   #13131a;
+  --bg-card:       #1a1a24;
+
+  --accent-orange: #fb790b;
+  --accent-amber:  #7e2b03;
+  --accent-blue:   #1205ad;
+  --accent-teal:   #0d0c0e;
+
+  --text-primary:  #ffffff;
+  --text-secondary:#a0a0b8;
+  --text-muted:    #4a4a62;
+
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-active: rgba(251,121,11,0.4);
+
+  --glow-orange:   0 0 30px rgba(251,121,11,0.3);
+  --glow-blue:     0 0 30px rgba(18,5,173,0.4);
+
+  --font-display:  'Bebas Neue', sans-serif;
+  --font-body:     'DM Sans', sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+
+  --radius-sm:     6px;
+  --radius-md:     12px;
+  --radius-lg:     20px;
+  --radius-full:   9999px;
+
+  --transition:    all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Subtle noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--accent-orange); border-radius: 2px; }
+
+/* ── Selection ──────────────────────────────────────── */
+::selection {
+  background: rgba(251,121,11,0.3);
+  color: var(--text-primary);
+}
+
+/* ── Utility classes ────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}

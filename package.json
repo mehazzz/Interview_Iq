@@ -1,0 +1,14 @@
+{
+  "name": "interviewiq-root",
+  "scripts": {
+    "start": "concurrently \"npm:interviewiq\" \"npm:aptitude-be\" \"npm:aptitude-fe\" \"npm:hr-be\" \"npm:hr-fe\"",
+    "interviewiq": "cd interviewiq && npm start",
+    "aptitude-be": "cd aptitude/backend && node server.js",
+    "aptitude-fe": "cd aptitude/frontend && set BROWSER=none&& set PORT=3001&& npx react-scripts start",
+    "hr-be": "cd HR/backend && node server.js",
+    "hr-fe": "cd HR/frontend && set BROWSER=none&& set PORT=3002&& npx react-scripts start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
