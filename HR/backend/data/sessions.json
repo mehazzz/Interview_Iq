@@ -400,5 +400,43 @@
       ],
       "readyForInterview": false
     }
+  },
+  "082276a1-ce8f-417e-8cc2-67e0b4d82b0e": {
+    "sessionId": "082276a1-ce8f-417e-8cc2-67e0b4d82b0e",
+    "userId": "0d3adb6c-d659-460d-8bc1-fc42cd787de3",
+    "role": "Frontend Developer",
+    "mode": "practice",
+    "status": "active",
+    "questionIndex": 1,
+    "maxQuestions": 8,
+    "startedAt": 1776005583450,
+    "currentQuestion": "How do you ensure accessibility in your frontend work?",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "How do you ensure accessibility in your frontend work?"
+      }
+    ],
+    "scores": [],
+    "createdAt": 1776005583454
+  },
+  "3fa79963-6d52-4ec8-9825-0a324ef95f6d": {
+    "sessionId": "3fa79963-6d52-4ec8-9825-0a324ef95f6d",
+    "userId": "0d3adb6c-d659-460d-8bc1-fc42cd787de3",
+    "role": "Frontend Developer",
+    "mode": "practice",
+    "status": "active",
+    "questionIndex": 1,
+    "maxQuestions": 8,
+    "startedAt": 1776055390311,
+    "currentQuestion": "How does React's virtual DOM work and why is it beneficial?",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "How does React's virtual DOM work and why is it beneficial?"
+      }
+    ],
+    "scores": [],
+    "createdAt": 1776055390318
   }
 }

@@ -4,8 +4,8 @@ import Navbar from '../components/Navbar';
 import styles from './LandingPage.module.css';
 
 const STATS = [
-  { num: '50K+', label: 'USERS PLACED' },
-  { num: '94%',  label: 'SUCCESS RATE' },
+  {  label: 'GET PLACED' },
+  {label: 'BUILD SUCCESS ' },
   { num: '3K+',  label: 'QUESTIONS' },
 ];
 
